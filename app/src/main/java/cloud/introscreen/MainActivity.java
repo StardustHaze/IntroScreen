@@ -61,8 +61,7 @@ public class MainActivity extends Activity {
         dotsLayout = (LinearLayout) findViewById(R.id.LayoutDots);
         skip = (Button) findViewById(R.id.btn_skip);
         next = (Button) findViewById(R.id.btn_next);
-        for
-                (int i : layouts = new int[]{
+                for (int i : layouts = new int[]{
                     R.layout.activity_screen1,
                     R.layout.activity_screen2,
                     R.layout.activity_screen3,
@@ -70,7 +69,7 @@ public class MainActivity extends Activity {
                     R.layout.activity_screen5}) {
 
         }
-        ;
+
 
         addBottomDots(0);
         changeStatusBarColor();
@@ -210,3 +209,4 @@ public void onPageScrollStateChanged(int state){
             container.removeView(v);
         }}}
 
+//test
