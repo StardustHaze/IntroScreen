@@ -11,28 +11,38 @@ public class IntroManager {
 
     SharedPreferences pref;
     SharedPreferences.Editor editor;
-    Context context;
+    Context _context;
 
+    //shared pref mode
+    int PRIVATE_MODE =0;
+    
+    //shared preferences file name
+    private static final String PREF_NAME = "br0ly-welcome";
+    
+    private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+    
     public IntroManager(Context context)
     {
-        this.context=context;
-        pref=context.getSharedPreferences("first",0);
+        this._context = context;
+        pref=context.getSharedPreferences(PREF_NAME, PRIVATE_MODE);
         editor = pref.edit();
     }
 
 
-    public void setFirst(boolean isFirst)
+    public void setIsFirstTimeLaunch(boolean isFirstTime)
     {
-        editor.putBoolean("check", isFirst);
+        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
         editor.commit();
     }
 
 
-    public boolean Check()
+    public boolean isFirstTimeLaunch()
     {
 
-        return pref.getBoolean("check", true);
+        return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
     }
 
 
+    public void setFirstTimeLaunch(boolean b) {
+    }
 }

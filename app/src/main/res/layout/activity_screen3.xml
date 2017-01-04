@@ -19,9 +19,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MMOs"
+            android:text="@string/mmo"
             android:textColor="@android:color/white"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 
@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:text="Work Hard. Play Harder"
+            android:text="@string/mmo_desc"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="30sp"

@@ -19,9 +19,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sports"
+            android:text="@string/sports"
             android:textColor="@android:color/white"
-            android:textSize="40dp"
+            android:textSize="40sp"
             android:textStyle="bold" />
 
 
@@ -31,7 +31,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:text="EA Sports, it's in the game"
+            android:text="@string/sports_desc"
             android:textAlignment="center"
             android:textColor="@android:color/white"
             android:textSize="30sp"

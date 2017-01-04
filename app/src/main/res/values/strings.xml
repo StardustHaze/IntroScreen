@@ -1,3 +1,21 @@
 <resources>
+
     <string name="app_name">IntroScreen</string>
+    <string name="title_activity_welcome">Home Screen</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="proceed">Proceed</string>
+
+
+    <string name="sports">Sports</string>
+    <string name="sports_desc">EA Sports, its in the game</string>
+    <string name="shooters">Shooters</string>
+    <string name="shooters_desc">We believe great games start with great people</string>
+    <string name="mmo">MMOs</string>
+    <string name="mmo_desc">Work Hard. Play Harder</string>
+    <string name="jrp">JRPGs</string>
+    <string name="jrp_desc">Fantasy Warfare</string>
+    <string name="fighter">Fighters</string>
+    <string name="fighter_desc">Whos the best?</string>
+
 </resources>
