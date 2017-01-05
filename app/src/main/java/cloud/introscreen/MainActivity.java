@@ -8,6 +8,7 @@ import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ import android.view.View;
 
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 
 
 
@@ -31,8 +32,6 @@ public class MainActivity extends Activity {
     private TextView[] dots;
     private Button next, skip;
     private LinearLayout dotsLayout;
-
-
 
     private int[] layouts;
 
@@ -50,7 +49,7 @@ public class MainActivity extends Activity {
         }
 
         //making notification bar transparent
-        if (Build.VERSION.SDK_INT >= 21)
+        if (Build.VERSION.SDK_INT >= 24)
         {
 
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_FULLSCREEN);
@@ -63,10 +62,10 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         viewPager = (ViewPager)findViewById(R.id.view_pager);
-        dotsLayout = (LinearLayout) findViewById(R.id.LayoutDots);
+        dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
         skip = (Button) findViewById(R.id.btn_skip);
         next = (Button) findViewById(R.id.btn_next);
-                //for(int i : )
+                //for(int i :
 
         //layouts of all screens
                     layouts = new int[]{
@@ -78,6 +77,7 @@ public class MainActivity extends Activity {
 
         //adding bottom dots
         addBottomDots(0);
+
 
         //making notification bar transparent
         changeStatusBarColor();
@@ -124,7 +124,10 @@ private void addBottomDots(int position)
         int[] colorActive = getResources().getIntArray(R.array.dot_active);
         int[] colorInactive = getResources().getIntArray(R.array.dot_inactive);
 
-        dotsLayout.removeAllViews();
+
+
+           dotsLayout.removeAllViews();
+
         for (int i = 0; i < dots.length; i++)
         {
             dots[i] = new TextView(this);
@@ -143,7 +146,7 @@ private void addBottomDots(int position)
         }
     private void launchHomeScreen() {
         introManager.setFirstTimeLaunch(false);
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, Main2.class));
         finish();
     }
 
@@ -167,7 +170,7 @@ public void onPageSelected(int position){
     //changing the next button text 'Proceed'
         if(position==layouts.length-1)
         {
-            //last pasge, make button text 'Proceed'
+            //last page, make button text 'Proceed'
             next.setText(getString(R.string.proceed));
             skip.setVisibility(View.GONE);
         }
@@ -195,7 +198,7 @@ public void onPageScrollStateChanged(int arg0){
         {
         Window window = getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.setStatusBarColor(Color.TRANSPARENT);
+        window.setStatusBarColor(Color.LTGRAY);
         }
 }
 
