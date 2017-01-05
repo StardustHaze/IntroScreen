@@ -1,3 +1,5 @@
+//StardustHaze
+
 package cloud.introscreen;
 
 import android.app.Activity;
